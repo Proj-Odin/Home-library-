@@ -55,4 +55,130 @@
         },
         {
           "AudioEncoder": "av_aac",
-          "AudioBitrate":
+          "AudioBitrate": 320,
+          "AudioMixdown": "5point1",
+          "AudioSamplerate": "auto",
+          "AudioTrackDRCSlider": 0.0,
+          "AudioTrackGainSlider": 0.0
+        }
+      ],
+      "Container": "av_mkv",
+      "PictureWidth": 3840,
+      "PictureHeight": 2160,
+      "PictureKeepRatio": true,
+      "PictureForceHeight": false,
+      "PictureForceWidth": false,
+      "PictureAutoCrop": true,
+      "x265Preset": "slow",
+      "CLI": "# HandBrakeCLI for Plex 4K HEVC\nHandBrakeCLI -i input.mkv -o output_4k.mkv --encoder x265_10bit --quality 24 --rate 0 --pfr --width 3840 --height 2160 --keep-display-aspect --audio 1,2 --aencoder copy:aac --ab 320,320 --mixdown none,5point1 --arate auto,auto --format mkv --x265-preset slow --hdr10"
+    },
+    {
+      "PresetName": "Plex TV HEVC 720p",
+      "Category": "Custom",
+      "Type": 1,
+      "VideoEncoder": "x265_10bit",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 23,
+      "VideoFramerateMode": 1,
+      "VideoFramerate": "0",
+      "AudioList": [
+        {
+          "AudioEncoder": "copy:auto",
+          "AudioMixdown": "none",
+          "AudioSamplerate": "auto",
+          "AudioTrackDRCSlider": 0.0,
+          "AudioTrackGainSlider": 0.0
+        },
+        {
+          "AudioEncoder": "av_aac",
+          "AudioBitrate": 160,
+          "AudioMixdown": "dpl2",
+          "AudioSamplerate": "auto",
+          "AudioTrackDRCSlider": 0.0,
+          "AudioTrackGainSlider": 0.0
+        }
+      ],
+      "Container": "av_mkv",
+      "PictureWidth": 1280,
+      "PictureHeight": 720,
+      "PictureKeepRatio": true,
+      "PictureForceHeight": false,
+      "PictureForceWidth": false,
+      "PictureAutoCrop": true,
+      "x265Preset": "medium",
+      "CLI": "# HandBrakeCLI for Plex TV HEVC 720p\nHandBrakeCLI -i input.mkv -o output_tv.mkv --encoder x265_10bit --quality 23 --rate 0 --pfr --width 1280 --height 720 --keep-display-aspect --audio 1,2 --aencoder copy:aac --ab 160,160 --mixdown none,dpl2 --arate auto,auto --format mkv --x265-preset medium --hdr10"
+    },
+    {
+      "PresetName": "Plex Anime HEVC 720p",
+      "Category": "Custom",
+      "Type": 1,
+      "VideoEncoder": "x265_10bit",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 20,
+      "VideoFramerateMode": 1,
+      "VideoFramerate": "0",
+      "AudioList": [
+        {
+          "AudioEncoder": "copy:auto",
+          "AudioMixdown": "none",
+          "AudioSamplerate": "auto",
+          "AudioTrackDRCSlider": 0.0,
+          "AudioTrackGainSlider": 0.0
+        },
+        {
+          "AudioEncoder": "av_aac",
+          "AudioBitrate": 160,
+          "AudioMixdown": "stereo",
+          "AudioSamplerate": "auto",
+          "AudioTrackDRCSlider": 0.0,
+          "AudioTrackGainSlider": 0.0
+        }
+      ],
+      "Container": "av_mkv",
+      "PictureWidth": 1280,
+      "PictureHeight": 720,
+      "PictureKeepRatio": true,
+      "PictureForceHeight": false,
+      "PictureForceWidth": false,
+      "PictureAutoCrop": true,
+      "x265Preset": "slow",
+      "CLI": "# HandBrakeCLI for Plex Anime HEVC 720p\nHandBrakeCLI -i input.mkv -o output_anime.mkv --encoder x265_10bit --quality 20 --rate 0 --pfr --width 1280 --height 720 --keep-display-aspect --audio 1,2 --aencoder copy:aac --ab 160,160 --mixdown none,stereo --arate auto,auto --format mkv --x265-preset slow --hdr10"
+    },
+    {
+      "PresetName": "Plex DVD HEVC 480p",
+      "Category": "Custom",
+      "Type": 1,
+      "VideoEncoder": "x265_10bit",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 21,
+      "VideoFramerateMode": 1,
+      "VideoFramerate": "0",
+      "AudioList": [
+        {
+          "AudioEncoder": "copy:auto",
+          "AudioMixdown": "none",
+          "AudioSamplerate": "auto",
+          "AudioTrackDRCSlider": 0.0,
+          "AudioTrackGainSlider": 0.0
+        },
+        {
+          "AudioEncoder": "av_aac",
+          "AudioBitrate": 128,
+          "AudioMixdown": "stereo",
+          "AudioSamplerate": "auto",
+          "AudioTrackDRCSlider": 0.0,
+          "AudioTrackGainSlider": 0.0
+        }
+      ],
+      "Container": "av_mkv",
+      "PictureWidth": 720,
+      "PictureHeight": 480,
+      "PictureKeepRatio": true,
+      "PictureForceHeight": false,
+      "PictureForceWidth": false,
+      "PictureAutoCrop": true,
+      "x265Preset": "medium",
+      "CLI": "# HandBrakeCLI for Plex DVD HEVC 480p\nHandBrakeCLI -i input.mkv -o output_dvd.mkv --encoder x265_10bit --quality 21 --rate 0 --pfr --width 720 --height 480 --keep-display-aspect --audio 1,2 --aencoder copy:aac --ab 128,128 --mixdown none,stereo --arate auto,auto --format mkv --x265-preset medium --hdr10"
+    }
+  ]
+}
